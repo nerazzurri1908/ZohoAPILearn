@@ -32,7 +32,6 @@ class DealController extends Controller
 
         $this->zohoAPI->inizialize();
         $response = $this->zohoAPI->createModuleRecord("Deals", $fields);
-        dd($response);
         return view('success', ['response' => $response]);
     }
 

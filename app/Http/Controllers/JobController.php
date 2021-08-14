@@ -83,7 +83,7 @@ class JobController extends Controller
             'jobId' => 'required',
         ]);
         $jobId = $request->get('jobId');
-        $filePath = base_path() . "/assets/";
+        $filePath = base_path();
 
         $this->zohoAPI->inizialize();
         $response = $this->zohoAPI->downloadJobResult($jobId);
